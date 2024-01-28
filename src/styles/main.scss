@@ -1,6 +1,20 @@
-$text: #27300f;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
+
+$green: #27300f;
 $orange: #d26a22;
 $white: #FFFFFF;
+
+$font-jost: 'Jost', sans-serif;
+$font-cormorant: 'Cormorant', serif;
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: $font-jost;
+    font-size: 1.6rem;
+}
 
 .header {
     max-width: 1440px;
@@ -10,24 +24,26 @@ $white: #FFFFFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 4rem;
     &__nav {
         display: flex;
         list-style-type: none;
         margin: 0;
         padding-left: 0;
-        gap: 48px;
+        gap: 4.8rem;
     }
     &__link {
-        font-size: 16px;
-        color: $text;
+        font-size: 1.6rem;
+        color: $green;
         text-decoration: none;
         &:hover {
             color: $orange;
         }
     }
     &__tel {
-        font-size: 16px;
-        color: $text;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $green;
         text-decoration: none;
         &:hover {
             color: $orange;
@@ -36,37 +52,51 @@ $white: #FFFFFF;
     &__cart {
         display: block;
         position: relative;
-        width: 40px;
-        height: 40px;
+        width: 3.8rem;
+        height: 3.8rem;
         border-radius: 50%;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
         background: url(../images/cart.svg) no-repeat center center $orange;
-    }
+        background-size: 1.7rem 1.5rem;
+        border: 1px solid $orange;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+}
     &__cart:hover {
-        background-color: $text;
+        background-color: $green;
+        border: 1px solid $green;
     }
     &__counter {
         display: block;
         position: absolute;
-        font-size: 8px;
-        right: 8px;
-        top: 7px;
+        font-size: .8rem;
+        font-weight: 400;
+        right: .8rem;
+        top: .4rem;
         color: $white;
     }
 }
 .logo {
     display: block;
-    width: 123px;
-    height: 32px;
+    width: 12.3rem;
+    height: 3.2rem;
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 .logo:hover {
-    width: 140px;
-    height: 37px;
-    margin-right: -17px;
+    width: 14rem;
+    height: 3.7rem;
+    margin-right: -1.7rem;
 }
