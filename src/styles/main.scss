@@ -1,5 +1,72 @@
-$bg: #ff0;
+$text: #27300f;
+$orange: #d26a22;
+$white: #FFFFFF;
 
-body {
-    background-color: $bg;
+.header {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__nav {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+        gap: 48px;
+    }
+    &__link {
+        font-size: 16px;
+        color: $text;
+        text-decoration: none;
+        &:hover {
+            color: $orange;
+        }
+    }
+    &__tel {
+        font-size: 16px;
+        color: $text;
+        text-decoration: none;
+        &:hover {
+            color: $orange;
+        }
+    }
+    &__cart {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background: url(../images/cart.svg) no-repeat center center $orange;
+    }
+    &__cart:hover {
+        background-color: $text;
+    }
+    &__counter {
+        display: block;
+        position: absolute;
+        font-size: 8px;
+        right: 8px;
+        top: 7px;
+        color: $white;
+    }
+}
+.logo {
+    display: block;
+    width: 123px;
+    height: 32px;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo:hover {
+    width: 140px;
+    height: 37px;
+    margin-right: -17px;
 }
