@@ -166,12 +166,12 @@ nav {
         -ms-border-radius: 100%;
         -o-border-radius: 100%;
         border: 1px solid rgba($green, 0.4);
-        display: flex;
-        justify-content: center;
-        align-items: center;
 }
     &__image {
-        width: 90%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-48.5%, -49.2%);
     }
     &__btn {
         position: absolute;
@@ -219,7 +219,7 @@ nav {
         }
         &_1 {
             top: 62px;
-            left: 146px;
+            left: 144px;
         }
         &_2 {
             top: 207px;
