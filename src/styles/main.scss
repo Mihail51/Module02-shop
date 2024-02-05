@@ -3,6 +3,7 @@
 $green: #27300f;
 $orange: #d26a22;
 $white: #FFFFFF;
+$icon: #b6b9ae;
 
 $font-jost: 'Jost', sans-serif;
 $font-cormorant: 'Cormorant', serif;
@@ -334,7 +335,7 @@ nav {
     background-size: cover;
     background-position-x: center;
     padding-top: 1.8rem;
-    padding-bottom: 200px;
+    padding-bottom: 164px;
     &__text {
         margin-top: 6rem;
         max-width: 690px;
@@ -537,5 +538,83 @@ nav {
         font-size: 1.8rem;
         color: #000;
     }
+}
+
+.about {
+    & .title {
+        letter-spacing: 0.17rem;
+    }
+    &__content {
+        width: 100%;
+        margin: 61px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__text {
+        flex-basis: 590px;
+        padding-left: 122px;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 150%;
+    }
+    &__icons {
+        flex-basis: 468px;
+        height: 145px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        gap: 89px;
+    }
+    &__icon {
+        flex-basis: 110px;
+        height: 100%;
+        position: relative;
+        font-family: $font-cormorant;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+    }
+    &__icon::before {
+        content: "";
+        width: 87px;
+        height: 87px;
+        position: absolute;
+        border: 1px solid $icon;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        bottom: 49px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+    &__icon:first-child::before {
+        background-image: url(../images/fruits.svg);
+        background-size: 43px 41px;
+    }
+    &__icon:nth-child(2)::before {
+        background-image: url(../images/traditional.svg);
+        background-size: 39px 39px;
+    }
+    &__icon:last-child::before {
+        background-image: url(../images/good.svg);
+        background-size: 45px 39px;
+    }
+   
 }
 
