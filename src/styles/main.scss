@@ -121,6 +121,7 @@ nav {
     background-position-x: center;
     position: relative;
     padding-bottom: 187px;
+    z-index: 0;
     &__item {
         height: 21rem;
         margin-left: 12rem;
@@ -259,26 +260,31 @@ nav {
         position: absolute;
         left: calc(50% - 272px);
         top: 0;
+        z-index: -1;
     }
     &__beans {
         position: absolute;
         left: 0;
         bottom: 155px;
+        z-index: -1;
     }
     &__tomato {
         position: absolute;
         right: calc(50% - 840px);
         bottom: 120px;
+        z-index: -1;
     }
     &__pepper {
         position: absolute;
         left: 38px;
         top: 37%;
+        z-index: -1;
     }
     &__avocado {
         position: absolute;
         right: -10px;
         top: 50px;
+        z-index: -1;
     }
 }
 .title {
@@ -302,6 +308,10 @@ nav {
         font-size: 1.8rem;
         line-height: 150%;
     }
+    &_size-m {
+        font-size: 2.4rem;
+        line-height: 150%;
+    }
 }
 .link {
     display: inline-block;
@@ -317,5 +327,203 @@ nav {
      -moz-border-radius: 3.25rem;
      -ms-border-radius: 3.25rem;
      -o-border-radius: 3.25rem;
+}
+.offer {
+    background-image: url(../images/offer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    padding-top: 1.8rem;
+    padding-bottom: 200px;
+    &__text {
+        margin-top: 6rem;
+        max-width: 690px;
+    }
+    &__slider {
+        overflow: hidden;
+        padding-top: 95px;
+    }
+}
+.swiper {
+    overflow: initial;
+    &-wrapper {
+ /*       gap: 5px;  */
+    }
+    &-slide {
+        height: 520px;
+        padding: 0 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        overflow: hidden;
+        box-sizing: border-box;
+        &:first-child {
+            background-image: url(../images/offer-milk.png);
+        }
+        &:nth-child(2) {
+            background-image: url(../images/offer-grocery.png);
+        }
+        &:nth-child(3) {
+            background-image: url(../images/offer-steaks.png);
+        }
+        &:nth-child(4) {
+            background-image: url(../images/offer-milk.png);
+        }
+        &:nth-child(5) {
+            background-image: url(../images/offer-grocery.png);
+        }
+        &:nth-child(6) {
+            background-image: url(../images/offer-steaks.png);
+        }
+        &:nth-child(7) {
+            background-image: url(../images/offer-milk.png);
+        }
+        &:nth-child(8) {
+            background-image: url(../images/offer-grocery.png);
+        }
+        &:nth-child(9) {
+            background-image: url(../images/offer-steaks.png);
+        }
+        /*
+        &:nth-child(2) {
+            transform: translateX(2.5px);
+            -webkit-transform: translateX(2.5px);
+            -moz-transform: translateX(2.5px);
+            -ms-transform: translateX(2.5px);
+            -o-transform: translateX(2.5px);
+        }                                                                                                                    
+        &:nth-child(3) {
+            transform: translateX(5px);
+            -webkit-transform: translateX(5px);
+            -moz-transform: translateX(5px);
+            -ms-transform: translateX(5px);
+            -o-transform: translateX(5px);
+        }
+        */                                                                                                                    
+        &__hover {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 12px;
+            bottom: 0;
+            padding-left: 37px;
+            padding-bottom: 44px;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            border: 3px solid rgba($green, 0.55);
+            background-color: rgba(255, 255, 255, 0.55);
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            opacity: 0;
+            transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -ms-transition: 0.5s;
+            -o-transition: 0.5s;
+}
+        &__inner {
+            position: absolute;
+            left: 3px;
+            top: 0;
+            right: 12px;
+            bottom: 0;
+            border: 1px solid rgba($green, 0.4);
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            padding-left: 42px;
+            padding-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            opacity: 1;
+            transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -ms-transition: 0.5s;
+            -o-transition: 0.5s;
+}
+        &__name {
+            font-family: $font-cormorant;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        &:hover &__hover {
+            opacity: 1;
+        }  
+        &:hover &__inner {
+            opacity: 0;
+        }
+        &__title {
+            margin: 0;
+            font-family: $font-cormorant;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        &__text {
+            width: 263px;
+            margin: 27px 0 39px;
+            font-size: 1.6rem;
+            line-height: 150%;
+            opacity: 0.7;
+        }
+        &__link {
+            position: relative;
+            font-size: 1.6rem;
+            font-weight: 500;
+            letter-spacing: 0.08rem;
+            color: $green;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding-left: 55px;
+        }
+        &__link::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid $green;
+            border-radius: 100%;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            -ms-border-radius: 100%;
+            -o-border-radius: 100%;
+            background-image: url(../images/plus.png);
+            background-repeat: no-repeat;
+            background-size: 14px 14px;
+            background-position: center center;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+}  
+}
+    &-pagination {
+        display: none;
+    }
+    &-button-next, 
+    &-button-prev {
+        top: -60px;
+    }
+    &-button-prev {
+        left: initial;
+        right: 100px;
+    }
+    &-button-next::after, 
+    &-button-prev::after {
+        font-size: 1.8rem;
+        color: #000;
+    }
 }
 
