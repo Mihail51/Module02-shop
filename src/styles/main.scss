@@ -351,9 +351,8 @@ nav {
     }
     &-slide {
         height: 520px;
-        padding: 0 10px;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: 100% center;
         background-size: contain;
         overflow: hidden;
         box-sizing: border-box;
@@ -384,27 +383,34 @@ nav {
         &:nth-child(9) {
             background-image: url(../images/offer-steaks.png);
         }
-        /*
-        &:nth-child(2) {
-            transform: translateX(2.5px);
-            -webkit-transform: translateX(2.5px);
-            -moz-transform: translateX(2.5px);
-            -ms-transform: translateX(2.5px);
-            -o-transform: translateX(2.5px);
-        }                                                                                                                    
-        &:nth-child(3) {
-            transform: translateX(5px);
-            -webkit-transform: translateX(5px);
-            -moz-transform: translateX(5px);
-            -ms-transform: translateX(5px);
-            -o-transform: translateX(5px);
+        &-next {
+            background-position-x: 50%;
         }
-        */                                                                                                                    
+        &-active {
+            background-position-x: 0;
+        }
+        &-next &__hover, 
+        &-next &__inner {
+            transform: translateX(-6.5px);
+            -webkit-transform: translateX(-6.5px);
+            -moz-transform: translateX(-6.5px);
+            -ms-transform: translateX(-6.5px);
+            -o-transform: translateX(-6.5px);
+}                                                                                                                    
+        &-active &__hover, 
+        &-active &__inner {
+            transform: translateX(-12px);
+            -webkit-transform: translateX(-12px);
+            -moz-transform: translateX(-12px);
+            -ms-transform: translateX(-12px);
+            -o-transform: translateX(-12px);
+}
+                                                                                                                            
         &__hover {
             position: absolute;
-            left: 0;
+            right: 0;
             top: 0;
-            right: 12px;
+            left: 12px;
             bottom: 0;
             padding-left: 37px;
             padding-bottom: 44px;
@@ -427,9 +433,9 @@ nav {
 }
         &__inner {
             position: absolute;
-            left: 3px;
+            right: 0px;
             top: 0;
-            right: 12px;
+            left: 12px;
             bottom: 0;
             border: 1px solid rgba($green, 0.4);
             border-radius: 20px;
@@ -437,7 +443,7 @@ nav {
             -moz-border-radius: 20px;
             -ms-border-radius: 20px;
             -o-border-radius: 20px;
-            padding-left: 42px;
+            padding-left: 45px;
             padding-bottom: 32px;
             display: flex;
             flex-direction: column;
@@ -482,7 +488,10 @@ nav {
             color: $green;
             text-decoration: none;
             text-transform: uppercase;
-            padding-left: 55px;
+            padding-left: 52px;
+        }
+        &__link {
+            cursor: pointer;
         }
         &__link::before {
             content: "";
@@ -516,9 +525,12 @@ nav {
     &-button-prev {
         top: -60px;
     }
+    &-button-next {
+        right: -10px;
+    }
     &-button-prev {
         left: initial;
-        right: 100px;
+        right: 75px;
     }
     &-button-next::after, 
     &-button-prev::after {
