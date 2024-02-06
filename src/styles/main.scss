@@ -347,9 +347,6 @@ nav {
 }
 .swiper {
     overflow: initial;
-    &-wrapper {
- /*       gap: 5px;  */
-    }
     &-slide {
         height: 520px;
         background-repeat: no-repeat;
@@ -390,22 +387,20 @@ nav {
         &-active {
             background-position-x: 0;
         }
-        &-next &__hover, 
-        &-next &__inner {
+        &-next &__hover {
             transform: translateX(-6.5px);
             -webkit-transform: translateX(-6.5px);
             -moz-transform: translateX(-6.5px);
             -ms-transform: translateX(-6.5px);
             -o-transform: translateX(-6.5px);
 }                                                                                                                    
-        &-active &__hover, 
-        &-active &__inner {
+        &-active &__hover {
             transform: translateX(-12px);
             -webkit-transform: translateX(-12px);
             -moz-transform: translateX(-12px);
             -ms-transform: translateX(-12px);
             -o-transform: translateX(-12px);
-}
+        }
                                                                                                                             
         &__hover {
             position: absolute;
@@ -420,53 +415,15 @@ nav {
             -moz-border-radius: 20px;
             -ms-border-radius: 20px;
             -o-border-radius: 20px;
-            border: 3px solid rgba($green, 0.55);
-            background-color: rgba(255, 255, 255, 0.55);
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
-            opacity: 0;
-            transition: 0.5s;
-            -webkit-transition: 0.5s;
-            -moz-transition: 0.5s;
-            -ms-transition: 0.5s;
-            -o-transition: 0.5s;
-}
-        &__inner {
-            position: absolute;
-            right: 0px;
-            top: 0;
-            left: 12px;
-            bottom: 0;
             border: 1px solid rgba($green, 0.4);
-            border-radius: 20px;
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            -ms-border-radius: 20px;
-            -o-border-radius: 20px;
-            padding-left: 45px;
-            padding-bottom: 32px;
-            display: flex;
+             display: flex;
             flex-direction: column;
             justify-content: end;
-            opacity: 1;
             transition: 0.5s;
             -webkit-transition: 0.5s;
             -moz-transition: 0.5s;
             -ms-transition: 0.5s;
             -o-transition: 0.5s;
-}
-        &__name {
-            font-family: $font-cormorant;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0;
-        }
-        &:hover &__hover {
-            opacity: 1;
-        }  
-        &:hover &__inner {
-            opacity: 0;
         }
         &__title {
             margin: 0;
@@ -490,9 +447,13 @@ nav {
             text-decoration: none;
             text-transform: uppercase;
             padding-left: 52px;
-        }
-        &__link {
+            margin-bottom: -239px;
             cursor: pointer;
+            transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -ms-transition: 0.5s;
+            -o-transition: 0.5s;
         }
         &__link::before {
             content: "";
@@ -517,8 +478,15 @@ nav {
             -moz-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             -o-transform: translateY(-50%);
-}  
-}
+        }
+        &:hover &__hover {
+            border: 3px solid rgba($green, 0.55);
+            background-color: rgba(255, 255, 255, 0.55);
+            }
+        &:hover &__link {
+                margin-bottom: 0;
+            } 
+    }
     &-pagination {
         display: none;
     }
