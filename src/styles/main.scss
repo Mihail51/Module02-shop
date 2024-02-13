@@ -735,7 +735,7 @@ nav {
     &__btn {
         display: block;
         position: relative;
-        margin: 65px auto 170px;
+        margin: 65px auto 143px;
         padding-left: 45px;
         border: none;
         background-color: transparent;
@@ -756,5 +756,41 @@ nav {
         -o-transform: translateY(-50%);
         background: url(../images/catalog/refresh.svg) no-repeat center center;
 }
+}
+.delivery {
+    &__wrapper {
+        width: 100%;
+        padding: 0 122px;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        box-sizing: border-box;
+        margin-top: 55px;
+        margin-bottom: 100px;
+    }
+    &__shipping {
+        flex-basis: 570px;
+        & p:nth-child(2) {
+            margin-top: 27px;
+        }
+    }
+    &__payment {
+        flex-basis: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    &__payment p span {
+        color: $orange;
+    }
+    &__icons {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        gap: 34px;
+    }
 }
 
