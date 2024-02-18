@@ -759,23 +759,46 @@ nav {
 }
 .delivery {
     &__wrapper {
-        width: 100%;
-        padding: 0 122px;
-        display: flex;
-        justify-content: space-between;
+       display: flex;
+        justify-content: start;
         align-items: stretch;
+        margin-top: 5.5rem;
+        margin-left: 8.4%;
+        gap: 11.5%;
         box-sizing: border-box;
-        margin-top: 55px;
         margin-bottom: 185px;
     }
     &__shipping {
-        flex-basis: 570px;
-        & p:nth-child(2) {
-            margin-top: 27px;
+        flex-basis: 44%;
+        & p {
+            color: rgba(#27300f, .6);
+            &:first-child {
+                margin-bottom: 27px;
+            }
+        }
+    }
+    &__link {
+        position: relative;
+        text-decoration: none;
+        color: #27300f;
+        opacity: 0.6;
+        &::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: #27300f;
+            opacity: 0.6;
+        }
+        &:hover {
+            opacity: 1;
         }
     }
     &__payment {
-        flex-basis: 470px;
+        flex-basis: 37%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -790,7 +813,14 @@ nav {
         display: flex;
         justify-content: flex-start;
         align-items: start;
-        gap: 34px;
+        gap: 31px;
+    }
+    &__icon {
+        opacity: 0.4;
+    }
+    &__icon:hover {
+        opacity: 1;
+        cursor: pointer;
     }
 }
 .contact {
@@ -823,6 +853,9 @@ nav {
                     font-weight: 500;
                     text-decoration: none;
                     color: $green;
+                    &:hover {
+                        color: $orange;
+                    }
                 }
                 &::before {
                     content: "";
@@ -868,6 +901,7 @@ nav {
         font-size: 1.2rem;
         margin-bottom: 1.1rem;
         margin-left: 1rem;
+        color: $green;
     }
     & input {
         width: 88%;
@@ -880,13 +914,36 @@ nav {
         -o-border-radius: 20px;
         padding: 2.2rem 2.9rem;
         margin-bottom: 2.5rem;
+        color: rgba($green, 0.4);
+    }
+    & p {
+        margin-bottom: 3px;
+        font-size: 1.2rem;
+        line-height: 150%;
+        color: rgba($green, 0.6);
+        & a {
+            position: relative;
+           color: rgba($green, 0.6);
+           text-decoration: none;
+           &:hover {
+                color: rgba($green, 1);
+           }
+           &::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: rgba($green, 0.6);
+           } 
+        }
     }
     &__link {
         padding: 2.5rem 4.5rem;
         margin-top: 0.8rem;
     }
-    & p {
-        margin-bottom: 3px;
-    }
+   
 }
 
