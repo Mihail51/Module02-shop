@@ -2,6 +2,7 @@
 
 $green: #27300f;
 $orange: #d26a22;
+$orange-hover: #bf601f;
 $white: #FFFFFF;
 $icon: #b6b9ae;
 
@@ -39,6 +40,11 @@ body {
     &__link {
         color: $green;
         text-decoration: none;
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
         &:hover {
             color: $orange;
         }
@@ -49,6 +55,11 @@ body {
         color: $green;
         text-decoration: none;
         margin-right: -154px;
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
         &:hover {
             color: $orange;
         }
@@ -71,7 +82,7 @@ body {
         -moz-transition: 0.3s;
         -ms-transition: 0.3s;
         -o-transition: 0.3s;
-}
+    }
     &__cart:hover {
         background-color: $green;
         border: 1px solid $green;
@@ -100,15 +111,15 @@ body {
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     margin-right: -118px;
+    &:hover {
+        width: 14rem;
+        height: 3.7rem;
+        margin-right: -13.5rem;
+    }
 }
 nav {
     margin-right: 15px;
-}
-.logo:hover {
-    width: 14rem;
-    height: 3.7rem;
-    margin-right: -13.5rem;
-}
+}  
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -176,25 +187,20 @@ nav {
         transform: translate(-48.5%, -49.2%);
     }
     &__btn {
-        position: absolute;
-        width: 21px;
-        height: 21px;
-        border-radius: 100%;
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        -ms-border-radius: 100%;
-        -o-border-radius: 100%;
-        border: 1px solid $green;
-        background: $green;
-         display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
-        transform: 0.3s;
-        -webkit-transform: 0.3s;
-        -moz-transform: 0.3s;
-        -ms-transform: 0.3s;
-        -o-transform: 0.3s;   
+       position: absolute;
+       width: 21px;
+       height: 21px;
+       border-radius: 100%;
+       -webkit-border-radius: 100%;
+       -moz-border-radius: 100%;
+       -ms-border-radius: 100%;
+       -o-border-radius: 100%;
+       border: 1px solid $green;
+       background: $green;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: transparent;
         & span {
             position: absolute;
             border: none;
@@ -207,14 +213,15 @@ nav {
             -moz-border-radius: 100%;
             -ms-border-radius: 100%;
             -o-border-radius: 100%;
-            transform: 0.3s;
-            -webkit-transform: 0.3s;
-            -moz-transform: 0.3s;
-            -ms-transform: 0.3s;
-            -o-transform: 0.3s;
-        }  
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -ms-transition: 0.3s;
+            -o-transition: 0.3s;
+}  
         &:hover {
            border: 1px solid $orange;
+           cursor: pointer;
            & span {
             background-color: $orange;
            } 
@@ -321,20 +328,28 @@ nav {
 .link {
     display: inline-block;
     letter-spacing: 0.13rem;
-     color: $white;
-     text-transform: uppercase;
-     text-decoration: none;
-     padding: 2.5rem 4.1rem;
-     background-color: $orange;
-     box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
-     border-radius: 3.25rem;
-     -webkit-border-radius: 3.25rem;
-     -moz-border-radius: 3.25rem;
-     -ms-border-radius: 3.25rem;
-     -o-border-radius: 3.25rem;
-     justify-content: center;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2.5rem 4.1rem;
+    background-color: $orange;
+    box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
+    border-radius: 3.25rem;
+    -webkit-border-radius: 3.25rem;
+    -moz-border-radius: 3.25rem;
+    -ms-border-radius: 3.25rem;
+    -o-border-radius: 3.25rem;
+    justify-content: center;
     align-items: center;
     text-decoration: none;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    &:hover {
+        background-color: $orange-hover;
+    }
 }
 .offer {
     background-image: url(../images/offer.png);
@@ -489,7 +504,7 @@ nav {
             font-size: 1.6rem;
             font-weight: 500;
             letter-spacing: 0.08rem;
-            color: $green;
+            color: rgba($green, 0.8);
             text-decoration: none;
             text-transform: uppercase;
             padding-left: 52px;
@@ -499,6 +514,10 @@ nav {
             -moz-transition: 0.5s;
             -ms-transition: 0.5s;
             -o-transition: 0.5s;
+            opacity: .8;
+            &:hover {
+                opacity: 1;
+            }
         }
         &_white &__link {
             margin-bottom: -239px;
@@ -556,7 +575,16 @@ nav {
     &-button-next, 
     &-button-prev {
         top: -60px;
-    }
+        opacity: 0.4;
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+        &:hover {
+            opacity: 1;
+        }
+}
     &-button-next {
         right: -10px;
     }
@@ -675,9 +703,19 @@ nav {
         background-color: transparent;
         background-repeat: no-repeat;
         background-position: center center;
-        &_min {
+        opacity: 0.4;
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+         &_min {
             width: 40px;
             height: 40px;
+        }
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
         }
     }
     &__plus {
@@ -723,6 +761,11 @@ nav {
         opacity: 0.5;
         display: flex;
         color: $green;
+        transition: .3S;
+        -webkit-transition: .3S;
+        -moz-transition: .3S;
+        -ms-transition: .3S;
+        -o-transition: .3S;
         &_min {
             padding: 1.9rem 3.2rem;
             font-size: 1.4rem;
@@ -731,6 +774,12 @@ nav {
     &__link:active {
         border: 1px solid $orange;
         color: $orange;
+        opacity: 1;
+    }
+    &__link:hover {
+        border: 1px solid $orange;
+        color: $orange;
+        opacity: 1;
     }
     &__btn {
         display: block;
@@ -741,6 +790,17 @@ nav {
         background-color: transparent;
         text-transform: uppercase;
         letter-spacing: 0.12rem;
+        color: rgba($green, 0.8);
+        opacity: 0.8;
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
     }
     &__btn::before {
         content: "";
@@ -755,7 +815,7 @@ nav {
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
         background: url(../images/catalog/refresh.svg) no-repeat center center;
-}
+    }
 }
 .delivery {
     &__wrapper {
@@ -782,6 +842,11 @@ nav {
         text-decoration: none;
         color: #27300f;
         opacity: 0.6;
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
         &::after {
             content: "";
             width: 100%;
@@ -817,11 +882,21 @@ nav {
     }
     &__icon {
         opacity: 0.4;
-    }
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+}
     &__icon:hover {
         opacity: 1;
         cursor: pointer;
-    }
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+}
 }
 .end {
     background-image: url(../images/background_end.png);
@@ -860,7 +935,12 @@ nav {
                     font-weight: 500;
                     text-decoration: none;
                     color: $green;
-                    &:hover {
+                    transition: .3s;
+                    -webkit-transition: .3s;
+                    -moz-transition: .3s;
+                    -ms-transition: .3s;
+                    -o-transition: .3s;
+                     &:hover {
                         color: $orange;
                     }
                 }
@@ -913,7 +993,7 @@ nav {
     & input {
         width: 88%;
         display: block;
-        border: 1px solid rgba($green, 0.4);
+        border: 1px solid $green;
         border-radius: 20px;
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
@@ -929,12 +1009,14 @@ nav {
         line-height: 150%;
         color: rgba($green, 0.6);
         & a {
-            position: relative;
+           position: relative;
            color: rgba($green, 0.6);
            text-decoration: none;
-           &:hover {
-                color: rgba($green, 1);
-           }
+           transition: .3s;
+           -webkit-transition: .3s;
+           -moz-transition: .3s;
+           -ms-transition: .3s;
+           -o-transition: .3s;
            &::after {
             content: "";
             width: 100%;
@@ -944,7 +1026,10 @@ nav {
             left: 0;
             bottom: 0;
             background-color: rgba($green, 0.6);
-           } 
+           }
+            &:hover {
+                color: rgba($green, 1);
+           }
         }
     }
     &__link {
@@ -990,6 +1075,14 @@ nav {
             & a {
                 text-decoration: none;
                 color: $green;
+                transition: .3s;
+                -webkit-transition: .3s;
+                -moz-transition: .3s;
+                -ms-transition: .3s;
+                -o-transition: .3s;
+                &:hover {
+                    color: $orange;
+                }
             }
         }
     }
@@ -1002,7 +1095,12 @@ nav {
         & a {
             text-decoration: none;
             color: $green;
-            &:hover {
+            transition: .3s;
+            -webkit-transition: .3s;
+            -moz-transition: .3s;
+            -ms-transition: .3s;
+            -o-transition: .3s;
+             &:hover {
                 color: $orange;
             }
         }
@@ -1039,8 +1137,15 @@ nav {
         -o-border-radius: 100%;
         background-repeat: no-repeat;
         background-position: center center;
+        opacity: 0.8;
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
         &:hover {
             cursor: pointer;
+            opacity: 1;
         }
         &_1 {
             background-image: url(../images/vk.svg);
@@ -1054,7 +1159,7 @@ nav {
             background-image: url(../images/facebook.svg);
             background-size: 18px;
         }
-    }
+}
     &__text {
         display: flex;
         justify-content: space-between;
@@ -1067,6 +1172,11 @@ nav {
                 text-decoration: none;
                 color: #27300f;
                 opacity: 0.6;
+                transition: .3s;
+                -webkit-transition: .3s;
+                -moz-transition: .3s;
+                -ms-transition: .3s;
+                -o-transition: .3s;
                 &:hover {
                     opacity: 1;
                 }
