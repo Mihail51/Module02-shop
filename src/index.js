@@ -10,19 +10,23 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 
 var swiper = new Swiper(".offerSwiper", {
-      slidesPerView: 3,
+      slidesPerView: 1,
       centeredSlides: false,
       slidesPerGroupSkip: 1,
       grabCursor: true,
       keyboard: {
         enabled: true,
       },
-/*      breakpoints: {
-        769: {
+      breakpoints: {
+        576: {
           slidesPerView: 2,
-          slidesPerGroup: 2,
+          slidesPerGroup: 1,
         },
-      },   */
+        1200: {
+          slidesPerView: 3,
+          slidesPerGroup: 1
+        }
+      },   
       scrollbar: {
         el: ".swiper-scrollbar",
       },

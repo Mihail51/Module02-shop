@@ -618,7 +618,6 @@ body {
         margin-top: 6rem;
         max-width: 690px;
     }
-    
 }
 .slider {
     overflow: hidden;
@@ -647,16 +646,24 @@ body {
         }
     }
     &-slide {
-        height: 685px;
+        position: relative;
+/*        height: 685px;   */
         background-repeat: no-repeat;
         background-position: 100% center;
         background-size: contain;
         overflow: hidden;
         box-sizing: border-box;
         margin-top: -2px;
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+        }
+        &_white::before {
+           padding-top: 108.333%;   
+        }
         &_white {
-            height: 520px;
-             &:first-child {
+            &:first-child {
             background-image: url(../images/offer-milk.png);
             }
             &:nth-child(2) {
