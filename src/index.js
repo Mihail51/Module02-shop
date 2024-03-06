@@ -10,7 +10,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 
 var swiper = new Swiper(".offerSwiper", {
-      slidesPerView: 1,
+      slidesPerView: 3,
       centeredSlides: false,
       slidesPerGroupSkip: 1,
       grabCursor: true,
@@ -18,6 +18,10 @@ var swiper = new Swiper(".offerSwiper", {
         enabled: true,
       },
       breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
         576: {
           slidesPerView: 2,
           slidesPerGroup: 1,
@@ -49,12 +53,20 @@ var swiper = new Swiper(".trendsSwiper", {
       keyboard: {
         enabled: true,
       },
-/*      breakpoints: {
-        769: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
         },
-      },   */
+        576: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+        },
+        1200: {
+          slidesPerView: 3,
+          slidesPerGroup: 1
+        }
+      },   
       scrollbar: {
         el: ".swiper-scrollbar",
       },
